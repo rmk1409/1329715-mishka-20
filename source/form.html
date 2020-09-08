@@ -9,7 +9,7 @@
   <nav class="main-nav">
     <section class="main-nav__logo-and-toggle-button logo-and-toggle-button">
       <a class="logo-and-toggle-button__logo" href="index.html" aria-label="Логотип">
-        <img src="https://via.placeholder.com/86x35" alt="Логотип" width="86px" height="35px">
+        <img src="https://via.placeholder.com/86x35" alt="Логотип" width="86" height="35">
       </a>
       <button class="logo-and-toggle-button__toggle-button button" type="button" aria-label="Закрыть/Открыть меню">
         X
@@ -39,8 +39,80 @@
     </ul>
   </nav>
 </header>
-<main>
-  <!--https://echo.htmlacademy.ru-->
+<main class="main-form">
+  <h1 class="main-form__header">Вязание на заказ</h1>
+  <p class="main-form__intro-text">
+    Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить
+    детали.
+  </p>
+  <form class="main-form__form form" action="https://echo.htmlacademy.ru" method="post">
+    <fieldset class="form__type-fieldset fieldset-type">
+      <h2 class="fieldset-type__header">Тип</h2>
+      <label class="fieldset-type__label">
+        <input class="fieldset-type__input" type="radio" name="type" value="accessory" checked>
+        Аксессуар для интерьера
+      </label>
+      <label class="fieldset-type__label">
+        <input class="fieldset-type__input" type="radio" name="type" value="toy">
+        Детская игрушка
+      </label>
+    </fieldset>
+    <fieldset class="form__fieldset-color fieldset-color">
+      <h2 class="fieldset-color__header">
+        Цвет
+      </h2>
+      <label class="fieldset-color__label">
+        <input class="fieldset-color__input" type="checkbox" name="white" checked>
+        Белый
+      </label>
+      <label class="fieldset-color__label">
+        <input class="fieldset-color__input" type="checkbox" name="grey" checked>
+        Серый
+      </label>
+      <label class="fieldset-color__label">
+        <input class="fieldset-color__input" type="checkbox" name="tiffani">
+        "Тиффани"
+      </label>
+      <label class="fieldset-color__label">
+        <input class="fieldset-color__input" type="checkbox" name="black">
+        Черный
+      </label>
+      <label class="fieldset-color__label">
+        <input class="fieldset-color__input" type="checkbox" name="pink">
+        Розовый
+      </label>
+      <label class="fieldset-color__label">
+        <input class="fieldset-color__input" type="checkbox" name="orange">
+        Оранжевый
+      </label>
+    </fieldset>
+    <fieldset class="form__name-fieldset fieldset-name">
+      <label class="fieldset-name__label" for="name-input">Имя:</label>
+      <input class="fieldset-name__input" id="name-input" type="text" placeholder="Введите ваше имя*" required>
+      <label class="fieldset-name__label" for="family-name-input">Фамилия:</label>
+      <input class="fieldset-name__input" id="family-name-input" type="text" placeholder="Укажите фамилию*" required>
+      <label class="fieldset-name__label" for="last-name-input">Отчество:</label>
+      <input class="fieldset-name__input" id="last-name-input" type="text" placeholder="Отчество, если желаете">
+    </fieldset>
+    <fieldset class="form__contacts-fieldset fieldset-contacts">
+      <label class="fieldset-contacts__label" for="phone-input">Тел</label>
+      <div class="fieldset-contacts__input-div fieldset-contacts__input-div--phone">
+        <input class="fieldset-contacts__input" id="phone-input" type="tel" placeholder="+7 xxx xxx xx xx*" required>
+      </div>
+      <label class="fieldset-contacts__label" for="email-input">E-mail</label>
+      <div class="fieldset-contacts__input-div fieldset-contacts__input-div--email">
+        <input class="fieldset-contacts__input" id="email-input" type="text" placeholder="Ваш Email*" required>
+      </div>
+    </fieldset>
+    <fieldset class="form__extra-info-fieldset fieldset-extra-info">
+      <h2 class="fieldset-extra-info__header">Доп</h2>
+      <textarea
+        class="fieldset-extra-info__comment-textarea" name="comment" placeholder="Опишите все ваши пожелания к заказу">
+      </textarea>
+    </fieldset>
+    <p class="form__necessary-fields-info">Поля обязательны для заполнения</p>
+    <button type="submit">Отправить заказ</button>
+  </form>
 </main>
 <footer class="main-footer">
   <section class="main-footer__social-section">
