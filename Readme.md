@@ -1,5 +1,10 @@
 # Личный проект «Мишка» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
+To look at this project:
+1. Install [node.js](https://nodejs.org/en/).
+2. **npm i** - to set the dependencies.
+3. **npm start** - to build and to run the project.
+
 * Студент: [R P](https://up.htmlacademy.ru/adaptive/20/user/1329715).
 * Наставник: [Виктория Коваленко](https://htmlacademy.ru/profile/id42638)..
 
