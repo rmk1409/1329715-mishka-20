@@ -1,0 +1,19 @@
+.options__link {
+  display: block;
+  width: 260px;
+  margin: 0 auto;
+  padding: 24px 120px 31px 30px;
+  font-weight: bold;
+  font-size: 19px;
+  line-height: 24px;
+  text-decoration: none;
+  color: $white;
+}
+
+.options__item--interior {
+  background-color: $green-light;
+}
+
+.options__item--toys {
+  background-color: $green-dark;
+}

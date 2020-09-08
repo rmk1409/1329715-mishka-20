@@ -1,0 +1,24 @@
+.fieldset-type {
+  padding-bottom: 40px;
+}
+
+.fieldset-type__header {
+  margin: 0 0 32px;
+  font-weight: bold;
+  font-size: 17px;
+  line-height: 16px;
+  color: $green-light;
+}
+
+.fieldset-type__label {
+  margin: 24px 0 0;
+  padding-left: 60px;
+  display: block;
+  font-weight: bold;
+  font-size: 17px;
+  line-height: 18px;
+}
+
+.fieldset-type__label:first-of-type {
+  margin: 0;
+}

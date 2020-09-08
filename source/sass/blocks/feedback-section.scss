@@ -1,0 +1,46 @@
+.feedback-section {
+  padding: 30px 0 45px;
+}
+
+.feedback-section__header {
+  margin: 0;
+  font-weight: bold;
+  font-size: 25px;
+  line-height: 30px;
+}
+
+.feedback-section__quote {
+  margin: 15px 0 0;
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 30px;
+  color: $almost-black;
+
+  &::before,
+  &::after {
+    content: none;
+  }
+}
+
+.feedback-section__author {
+  margin-top: 30px;
+  display: block;
+  font-weight: bold;
+  font-size: 17px;
+  line-height: 24px;
+  font-style: normal;
+}
+
+.feedback-section__author-insta {
+  margin: 10px 0 0;
+  font-size: 17px;
+  line-height: 24px;
+}
+
+.feedback-section__control-buttons-div {
+  margin-top: 30px;
+}
+
+.feedback-section__button {
+  margin-top: 38px;
+}

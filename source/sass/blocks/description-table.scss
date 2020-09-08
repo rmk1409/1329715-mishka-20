@@ -1,0 +1,17 @@
+.description-table {
+  border-collapse: collapse;
+}
+
+.description-table__header,
+.description-table__value {
+  width: 162px;
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 20px;
+  color: $almost-black;
+}
+
+.description-table__header {
+  width: 97px;
+  text-align: left;
+}

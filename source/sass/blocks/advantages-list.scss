@@ -1,0 +1,11 @@
+.advantages-list {
+  display: grid;
+  row-gap: 30px;
+}
+
+.advantages-list__item {
+  padding-top: 54px;
+  font-weight: bold;
+  font-size: 17px;
+  line-height: 20px;
+}
