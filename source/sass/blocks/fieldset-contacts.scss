@@ -1,4 +1,10 @@
+.fieldset-contacts {
+  padding-bottom: 34px;
+}
+
 .fieldset-contacts__label {
+  display: block;
+  margin: 34px 0 0;
   font-weight: bold;
   font-size: 17px;
   line-height: 16px;
@@ -6,8 +12,22 @@
   color: $green-light;
 }
 
+.fieldset-contacts__label:first-of-type {
+  margin: 0;
+}
+
 .fieldset-contacts__input {
+  width: 100%;
+  padding: 17px 0;
   font-family: inherit;
   font-size: 17px;
   line-height: 18px;
+  border: none;
+  box-shadow: inset 0 -2px 0 $black;
+}
+
+.fieldset-contacts__input--phone {
+  &::placeholder {
+    text-transform: uppercase;
+  }
 }

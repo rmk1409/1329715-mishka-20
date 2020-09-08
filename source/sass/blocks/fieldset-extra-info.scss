@@ -1,4 +1,5 @@
 .fieldset-extra-info__header {
+  margin: 0;
   font-weight: bold;
   font-size: 17px;
   line-height: 16px;
@@ -7,8 +8,13 @@
 }
 
 .fieldset-extra-info__comment-textarea {
+  margin-top: 22px;
+  width: 100%;
+  min-height: 142px;
+  padding: 17px;
   font-family: inherit;
   font-size: 17px;
   line-height: 18px;
+  border: 2px solid black;
   resize: none;
 }

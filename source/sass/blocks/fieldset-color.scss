@@ -1,4 +1,9 @@
+.fieldset-color {
+  padding-bottom: 50px;
+}
+
 .fieldset-color__header {
+  margin: 0 0 30px;
   font-weight: bold;
   font-size: 17px;
   line-height: 16px;
@@ -7,7 +12,13 @@
 
 .fieldset-color__label {
   display: block;
+  margin-top: 43px;
+  padding-left: 60px;
   font-weight: bold;
   font-size: 17px;
   line-height: 18px;
+}
+
+.fieldset-color__label:first-of-type {
+  margin-top: 0;
 }

@@ -53,7 +53,7 @@
       уточнить детали.
     </p>
     <form class="main-form__form form" action="https://echo.htmlacademy.ru" method="post">
-      <fieldset class="form__type-fieldset fieldset-type">
+      <fieldset class="form__type-fieldset fieldset-type reset-fieldset">
         <h2 class="fieldset-type__header">Тип</h2>
         <label class="fieldset-type__label">
           <input class="fieldset-type__input" type="radio" name="type" value="accessory" checked>
@@ -64,7 +64,7 @@
           Детская игрушка
         </label>
       </fieldset>
-      <fieldset class="form__fieldset-color fieldset-color">
+      <fieldset class="form__fieldset-color fieldset-color reset-fieldset">
         <h2 class="fieldset-color__header">
           Цвет
         </h2>
@@ -93,7 +93,7 @@
           Оранжевый
         </label>
       </fieldset>
-      <fieldset class="form__name-fieldset fieldset-name">
+      <fieldset class="form__name-fieldset fieldset-name reset-fieldset">
         <h2 class="fieldset-name__header">
           ФИО
         </h2>
@@ -104,17 +104,19 @@
         <label class="fieldset-name__label" for="last-name-input">Отчество:</label>
         <input class="fieldset-name__input" id="last-name-input" type="text" placeholder="Отчество, если желаете">
       </fieldset>
-      <fieldset class="form__contacts-fieldset fieldset-contacts">
+      <fieldset class="form__contacts-fieldset fieldset-contacts reset-fieldset">
         <label class="fieldset-contacts__label" for="phone-input">Тел</label>
         <div class="fieldset-contacts__input-div fieldset-contacts__input-div--phone">
-          <input class="fieldset-contacts__input" id="phone-input" type="tel" placeholder="+7 xxx xxx xx xx*" required>
+          <input
+            class="fieldset-contacts__input fieldset-contacts__input--phone" id="phone-input" type="tel"
+            placeholder="+7 xxx xxx xx xx*" required>
         </div>
         <label class="fieldset-contacts__label" for="email-input">E-mail</label>
         <div class="fieldset-contacts__input-div fieldset-contacts__input-div--email">
           <input class="fieldset-contacts__input" id="email-input" type="text" placeholder="Ваш Email*" required>
         </div>
       </fieldset>
-      <fieldset class="form__extra-info-fieldset fieldset-extra-info">
+      <fieldset class="form__extra-info-fieldset fieldset-extra-info reset-fieldset">
         <h2 class="fieldset-extra-info__header">Доп</h2>
         <textarea
           class="fieldset-extra-info__comment-textarea" name="comment"
