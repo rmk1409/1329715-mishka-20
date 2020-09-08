@@ -1,0 +1,55 @@
+body {
+  margin: 0;
+  min-width: $mobile-width;
+  font-family: "Open Sans", "Arial", sans-serif;
+  font-size: 13px;
+  line-height: 24px;
+}
+
+img {
+  max-width: 100%;
+}
+
+.container {
+  margin: 0 auto;
+  width: $mobile-width;
+  padding: 0 30px;
+
+  @media (min-width: $tablet-min-width) {
+    width: $tablet-min-width;
+    padding: 0 50px;
+  }
+
+  @media (min-width: $desktop-min-width) {
+    width: $desktop-min-width;
+  }
+}
+
+
+.reset-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.reset-fieldset {
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+.visually-hidden {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
