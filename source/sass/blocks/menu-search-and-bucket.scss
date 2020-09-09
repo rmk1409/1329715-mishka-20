@@ -1,0 +1,11 @@
+@media (min-width: $tablet-min-width) {
+  .menu-search-and-bucket__search-span {
+    display: none;
+  }
+
+  .menu-search-and-bucket__search-link {
+    width: 89px;
+    height: 89px;
+    background-color: $green;
+  }
+}

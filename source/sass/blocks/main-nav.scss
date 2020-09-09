@@ -1,0 +1,51 @@
+.main-nav__free-delivery-paragraph,
+.main-nav__menu-new-and-sell {
+  display: none;
+}
+
+@media (min-width: $tablet-min-width) {
+  .main-nav__container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  .main-nav__free-delivery-paragraph {
+    order: 4;
+    display: block;
+    z-index: 1;
+    margin: 0 0 0 auto;
+    font-size: 15px;
+    line-height: 24px;
+    color: $almost-black;
+  }
+
+  .main-nav__menu-catalog-and-personal {
+    order: 3;
+    z-index: 1;
+  }
+
+  .main-nav__menu-new-and-sell {
+    order: 2;
+  }
+}
+
+@media (min-width: $desktop-min-width) {
+  .main-nav__menu-catalog-and-personal {
+    order: 1;
+  }
+
+  .main-nav__logo-and-toggle-button {
+    order: 2;
+  }
+
+  .main-nav__menu-search-and-bucket {
+    order: 3;
+  }
+
+  .main-nav__menu-new-and-sell {
+    order: 4;
+    display: flex;
+    z-index: 1;
+  }
+}

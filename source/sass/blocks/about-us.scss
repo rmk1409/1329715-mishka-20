@@ -12,3 +12,22 @@
 .about-us__advantages-list {
   margin-top: 30px;
 }
+
+@media (min-width: $tablet-min-width) {
+  .about-us__header {
+    font-size: 43px;
+    line-height: 50px;
+  }
+}
+
+@media (min-width: $desktop-min-width) {
+  .about-us__header {
+    margin-left: 175px;
+    font-size: 53px;
+    line-height: 57px;
+  }
+
+  .about-us__advantages-list {
+    margin-left: 175px;
+  }
+}

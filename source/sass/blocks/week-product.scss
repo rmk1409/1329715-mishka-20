@@ -7,8 +7,12 @@
   background-color: $grey;
 }
 
+.week-product__header-and-label-div {
+  margin-top: 30px;
+}
+
 .week-product__header {
-  margin: 30px 0 0;
+  margin: 0;
   font-weight: bold;
   font-size: 25px;
   line-height: 30px;
@@ -23,8 +27,12 @@
   color: $green-light;
 }
 
+.week-product__product-info-div {
+  margin-top: 17px;
+}
+
 .week-product__description {
-  margin: 17px 0 0;
+  margin: 0;
   font-size: 15px;
   line-height: 24px;
   color: $almost-black;
@@ -44,4 +52,95 @@
 
 .week-product__order-button {
   margin: 24px 0 0;
+}
+
+@media (min-width: $tablet-min-width) {
+  .week-product__header-and-label-div {
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .week-product__header {
+    font-size: 43px;
+    line-height: 50px;
+  }
+
+  .week-product__label {
+    width: min-content;
+    font-size: 17px;
+    line-height: 17px;
+    text-align: center;
+  }
+
+  .week-product__product-info-div {
+    margin-top: 37px;
+    display: grid;
+    grid-template-rows: repeat(4, auto);
+    grid-template-columns: 292px 334px;
+    column-gap: 42px;
+  }
+
+  .week-product__description {
+    font-size: 17px;
+    line-height: 30px;
+  }
+
+  .week-product__description-table,
+  .week-product__price,
+  .week-product__order-button {
+    grid-column: 1;
+  }
+
+  .week-product__description-table {
+    margin-top: 48px;
+  }
+
+  .week-product__price {
+    margin-top: 57px;
+  }
+
+  .week-product__order-button {
+    margin-top: 34px;
+  }
+
+  .week-product__image {
+    grid-column: 2;
+    grid-row: 1/-1;
+    margin-top: 0;
+  }
+}
+
+@media (min-width: $desktop-min-width) {
+  .week-product__header-and-label-div {
+    margin-left: 30px;
+    margin-top: 115px;
+    width: 688px;
+  }
+
+  .week-product__header {
+    order: 1;
+    font-size: 53px;
+    line-height: 57px;
+  }
+
+  .week-product__product-info-div {
+    position: relative;
+    grid-template-columns: 292px;
+    margin-left: 175px;
+  }
+
+  .week-product__description-table {
+    margin-top: 60px;
+  }
+
+  .week-product__price {
+    margin-top: 110px;
+  }
+
+  .week-product__image {
+    position: absolute;
+    z-index: 0;
+  }
 }

@@ -15,3 +15,14 @@
   background-color: transparent;
   border: none;
 }
+
+@media (min-width: $tablet-min-width) {
+  .logo-and-toggle-button__toggle-button {
+    display: none;
+  }
+
+  .logo-and-toggle-button {
+    width: 350px;
+    padding: 0;
+  }
+}

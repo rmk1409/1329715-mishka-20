@@ -7,3 +7,13 @@
   text-decoration: none;
   color: $black;
 }
+
+@media (min-width: $tablet-min-width) {
+  .menu {
+    display: flex;
+  }
+
+  .menu__link {
+    padding: 21px 20px;
+  }
+}

@@ -9,7 +9,7 @@
 <body>
 <header>
   <nav class="main-nav">
-    <div class="container">
+    <div class="main-nav__container container">
       <section class="main-nav__logo-and-toggle-button logo-and-toggle-button">
         <a class="logo-and-toggle-button__logo" href="index.html" aria-label="Логотип">
           <img src="https://via.placeholder.com/86x35" alt="Логотип" width="86" height="35">
@@ -18,9 +18,9 @@
           X
         </button>
       </section>
-      <ul class="main-nav__menu menu reset-list">
+      <ul class="main-nav__menu-catalog-and-personal menu-catalog-and-personal menu reset-list">
         <li class="menu__item">
-          <a class="menu__link" href="catalog.html">
+          <a class="menu__link menu-catalog-and-personal__link" href="catalog.html">
             Каталог товаров
           </a>
         </li>
@@ -29,9 +29,11 @@
             Вязание на заказ
           </a>
         </li>
+      </ul>
+      <ul class="main-nav__menu-search-and-bucket menu-search-and-bucket menu reset-list">
         <li class="menu__item">
-          <a class="menu__link" href="#">
-            Поиск по сайту
+          <a class="menu__link menu-search-and-bucket__search-link" href="#">
+            <span class="menu-search-and-bucket__search-span">Поиск по сайту</span>
           </a>
         </li>
         <li class="menu__item">
@@ -40,6 +42,19 @@
           </a>
         </li>
       </ul>
+      <ul class="main-nav__menu-new-and-sell menu-new-and-sell menu reset-list">
+        <li class="menu__item">
+          <a class="menu__link menu-new-and-sell__new-link" href="#">
+            Новые поступления
+          </a>
+        </li>
+        <li class="menu__item">
+          <a class="menu__link" href="#">
+            Распродажа
+          </a>
+        </li>
+      </ul>
+      <p class="main-nav__free-delivery-paragraph">Бесплатная доставка по России</p>
     </div>
   </nav>
 </header>
@@ -128,7 +143,12 @@
   </div>
 </main>
 <footer class="main-footer">
-  <div class="container">
+  <div class="main-footer__container container">
+    <a class="main-footer__logo-link" href="index.html" aria-label="Логотип">
+      <img
+        class="main-footer__logo-img" src="https://via.placeholder.com/102x28" aria-label="Соц. сеть" width="102"
+        height="28" alt="Логотип">
+    </a>
     <section class="main-footer__social-section">
       <ul class="main-footer__social-list social-list reset-list">
         <li class="social-list__item">
