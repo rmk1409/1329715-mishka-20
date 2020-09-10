@@ -2,3 +2,16 @@
   display: grid;
   row-gap: 30px;
 }
+
+@media (min-width: $tablet-min-width) {
+  .catalog-list {
+    row-gap: 54px;
+  }
+}
+
+@media (min-width: $desktop-min-width) {
+  .catalog-list {
+    grid-template-columns: repeat(3, 316px);
+    gap: 51px;
+  }
+}

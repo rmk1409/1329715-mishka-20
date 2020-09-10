@@ -4,8 +4,27 @@
 }
 
 .advantages-list__item {
+  width: 250px;
   padding-top: 54px;
   font-weight: bold;
   font-size: 17px;
   line-height: 20px;
+}
+
+@media (min-width: $tablet-min-width) {
+  .advantages-list {
+    grid-template-columns: 235px 278px;
+    gap: 60px 100px;
+  }
+
+  .advantages-list__item {
+    font-size: 20px;
+    line-height: 22px;
+  }
+}
+
+@media (min-width: $desktop-min-width) {
+  .advantages-list {
+    column-gap: 115px;
+  }
 }

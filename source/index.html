@@ -9,7 +9,7 @@
 <body>
 <header>
   <nav class="main-nav">
-    <div class="container">
+    <div class="main-nav__container container">
       <section class="main-nav__logo-and-toggle-button logo-and-toggle-button">
         <a class="logo-and-toggle-button__logo" href="#" aria-label="Логотип">
           <img src="https://via.placeholder.com/86x35" alt="Логотип" width="86" height="35">
@@ -18,9 +18,9 @@
           X
         </button>
       </section>
-      <ul class="main-nav__menu menu reset-list">
+      <ul class="main-nav__menu-catalog-and-personal menu-catalog-and-personal menu reset-list">
         <li class="menu__item">
-          <a class="menu__link" href="catalog.html">
+          <a class="menu__link menu-catalog-and-personal__link" href="catalog.html">
             Каталог товаров
           </a>
         </li>
@@ -29,9 +29,11 @@
             Вязание на заказ
           </a>
         </li>
+      </ul>
+      <ul class="main-nav__menu-search-and-bucket menu-search-and-bucket menu reset-list">
         <li class="menu__item">
-          <a class="menu__link" href="#">
-            Поиск по сайту
+          <a class="menu__link menu-search-and-bucket__search-link" href="#">
+            <span class="menu-search-and-bucket__search-span">Поиск по сайту</span>
           </a>
         </li>
         <li class="menu__item">
@@ -40,6 +42,19 @@
           </a>
         </li>
       </ul>
+      <ul class="main-nav__menu-new-and-sell menu-new-and-sell menu reset-list">
+        <li class="menu__item">
+          <a class="menu__link menu-new-and-sell__new-link" href="#">
+            Новые поступления
+          </a>
+        </li>
+        <li class="menu__item">
+          <a class="menu__link" href="#">
+            Распродажа
+          </a>
+        </li>
+      </ul>
+      <p class="main-nav__free-delivery-paragraph">Бесплатная доставка по России</p>
     </div>
   </nav>
 </header>
@@ -60,38 +75,52 @@
   </section>
   <div class="container">
     <article class="main-index__week-product week-product">
-      <h2 class="week-product__header">Вязаные корзинки</h2>
-      <p class="week-product__label">Товар недели</p>
-      <p class="week-product__description">Экологически чистая пряжа, ручная работа. Доступны в шести расцветках, и трех
-        размерах.</p>
-      <table class="week-product__description-table description-table">
-        <tr>
-          <th class="description-table__header">Цвет</th>
-          <td class="description-table__value">"Тиффани"/серый</td>
-        </tr>
-        <tr>
-          <th class="description-table__header">Длина</th>
-          <td class="description-table__value">25 см</td>
-        </tr>
-        <tr>
-          <th class="description-table__header">Высота</th>
-          <td class="description-table__value">15 см</td>
-        </tr>
-      </table>
-      <img
-        class="week-product__image" src="https://via.placeholder.com/260x315" aria-label="Товар недели" width="260"
-        height="315" alt="Товар недели">
-      <p class="week-product__price">Цена: 990 руб.</p>
-      <a class="week-product__order-button button" href="#">Заказать</a>
+      <div class="week-product__header-and-label-div">
+        <h2 class="week-product__header">Вязаные корзинки</h2>
+        <p class="week-product__label">Товар недели</p>
+      </div>
+      <div class="week-product__product-info-div">
+        <p class="week-product__description">
+          Экологически чистая пряжа, ручная работа. Доступны в шести расцветках, и трех размерах.
+        </p>
+        <table class="week-product__description-table description-table">
+          <tr>
+            <th class="description-table__header">Цвет</th>
+            <td class="description-table__value">"Тиффани"/серый</td>
+          </tr>
+          <tr>
+            <th class="description-table__header">Длина</th>
+            <td class="description-table__value">25 см</td>
+          </tr>
+          <tr>
+            <th class="description-table__header">Высота</th>
+            <td class="description-table__value">15 см</td>
+          </tr>
+        </table>
+        <img
+          class="week-product__image" src="https://via.placeholder.com/260x315" aria-label="Товар недели" width="260"
+          height="315" alt="Товар недели">
+        <p class="week-product__price">Цена: 990 руб.</p>
+        <a class="week-product__order-button button" href="#">Заказать</a>
+      </div>
     </article>
   </div>
   <div class="container">
     <section class="main-index__about-us about-us">
       <h2 class="about-us__header">Коротко о нас:</h2>
       <ul class="about-us__advantages-list advantages-list reset-list">
-        <li class="advantages-list__item">Экологически чистые материалы</li>
-        <li class="advantages-list__item">Скандинавский стиль по российской цене</li>
-        <li class="advantages-list__item">Увеличивает лайки на фотографиях</li>
+        <li class="advantages-list__item">
+          Экологически&#32;<br>
+          чистые материалы
+        </li>
+        <li class="advantages-list__item">
+          Скандинавский стиль&#32;<br>
+          по российской цене
+        </li>
+        <li class="advantages-list__item">
+          Увеличивает лайки&#32;<br>
+          на фотографиях
+        </li>
         <li class="advantages-list__item">Связано вручную с любовью и умилением</li>
         <li class="advantages-list__item">Поддержка отечественного производителя</li>
         <li class="advantages-list__item">Поставляется в подарочной упаковке</li>
@@ -99,7 +128,7 @@
     </section>
   </div>
   <section class="main-index__feedback-section feedback-section">
-    <div class="container">
+    <div class="feedback-section__container">
       <h2 class="feedback-section__header">Отзывы</h2>
       <q class="feedback-section__quote">
         Я молодая мама, но всё равно фотографии не набирали и близко такого количества лайков, как у популярных
@@ -107,8 +136,10 @@
         стильными,
         а также набирают больше лайков!
       </q>
-      <cite class="feedback-section__author">Анастасия Красильникова</cite>
-      <p class="feedback-section__author-insta">@misssssiskras</p>
+      <div class="feedback-section__author-info-div">
+        <cite class="feedback-section__author">Анастасия Красильникова</cite>
+        <p class="feedback-section__author-insta">@misssssiskras</p>
+      </div>
       <div class="feedback-section__control-buttons-div control-buttons-div">
         <button class="control-buttons-div__button control-buttons-div__button--next"><-</button>
         <button class="control-buttons-div__button control-buttons-div__button--previous">-></button>
@@ -117,17 +148,22 @@
     </div>
   </section>
   <section class="main-index__contact-section contact-section">
-    <div class="container">
+    <div class="contact-section__container">
       <section class="contact-section__email-and-address-section email-and-address-section">
         <h2 class="email-and-address-section__header">Контакты</h2>
         <p class="email-and-address-section__label">e-mail:</p>
-        <a class="email-and-address-section__value email-and-address-section__value--email" href="mailto: info@mimimishkashop.ru">info@mimimishkashop.ru</a>
+        <a
+          class="email-and-address-section__value email-and-address-section__value--email"
+          href="mailto: info@mimimishkashop.ru">
+          info@mimimishkashop.ru
+        </a>
         <p class="email-and-address-section__label">адрес:</p>
         <address class="email-and-address-section__value email-and-address-section__value--address">
           г. Санкт-Петербург,
-          ул. Большая
-          Конюшенная, <br>
-          д. 19/8, офис 101</address>
+          ул.&nbsp;Большая
+          Конюшенная,&#32;<br>
+          д. 19/8, офис 101
+        </address>
       </section>
     </div>
     <section class="contact-section__map">
@@ -137,7 +173,12 @@
   </section>
 </main>
 <footer class="main-footer">
-  <div class="container">
+  <div class="main-footer__container container">
+    <a class="main-footer__logo-link" href="#" aria-label="Логотип">
+      <img
+        class="main-footer__logo-img" src="https://via.placeholder.com/102x28" aria-label="Соц. сеть" width="102"
+        height="28" alt="Логотип">
+    </a>
     <section class="main-footer__social-section">
       <ul class="main-footer__social-list social-list reset-list">
         <li class="social-list__item">

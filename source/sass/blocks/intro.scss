@@ -1,5 +1,4 @@
 .intro {
-  min-height: 280px;
   padding-top: 73px;
   background-color: $grey;
   background-image: url("../img/hero-mobile@1x.jpg");
@@ -18,4 +17,40 @@
   font-size: 27px;
   line-height: 30px;
   text-align: center;
+}
+
+@media (min-width: $tablet-min-width) {
+  .intro {
+    position: relative;
+    padding-top: 110px;
+    background-image: url("../img/hero-tablet@1x.jpg");
+
+    &::after {
+      position: absolute;
+      content: "";
+      bottom: -8px;
+      width: 100%;
+      height: 24px;
+      background-image: url("../img/bg-zigzag-fill.svg");
+    }
+  }
+
+  .intro__header {
+    width: auto;
+    font-size: 43px;
+    line-height: 50px;
+  }
+
+  .intro__options {
+    margin: 402px auto 0;
+    display: flex;
+    width: fit-content;
+  }
+}
+
+@media (min-width: $desktop-min-width) {
+  .intro__header {
+    font-size: 53px;
+    line-height: 57px;
+  }
 }

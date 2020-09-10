@@ -34,3 +34,15 @@
   font-size: 15px;
   line-height: 24px;
 }
+
+@media (min-width: $tablet-min-width) and (max-width: $desktop-min-width - 1px) {
+  .card {
+    display: grid;
+    grid-template-columns: 234px 335px;
+    grid-template-rows: repeat(3, auto);
+  }
+
+  .card__image {
+    grid-row: 1/-1;
+  }
+}

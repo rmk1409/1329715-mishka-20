@@ -18,3 +18,15 @@
   border: 2px solid black;
   resize: none;
 }
+
+@media (min-width: $tablet-min-width) {
+  .fieldset-extra-info__div {
+    display: grid;
+    grid-template-columns: 100px 500px;
+    column-gap: 20px;
+  }
+
+  .fieldset-extra-info__comment-textarea {
+    margin-top: 0;
+  }
+}

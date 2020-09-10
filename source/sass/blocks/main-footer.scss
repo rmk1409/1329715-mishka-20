@@ -15,3 +15,26 @@
   text-decoration: none;
   color: $black;
 }
+
+.main-footer__logo-link {
+  display: none;
+}
+
+@media (min-width: $tablet-min-width) {
+  .main-footer {
+    padding: 53px 0 60px;
+  }
+
+  .main-footer__container {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .main-footer__academy-link {
+    margin: 0;
+  }
+
+  .main-footer__logo-link {
+    display: block;
+  }
+}

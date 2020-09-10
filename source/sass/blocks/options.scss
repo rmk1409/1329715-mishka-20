@@ -17,3 +17,19 @@
 .options__item--toys {
   background-color: $green-dark;
 }
+
+@media (min-width: $tablet-min-width) {
+  .options__item {
+    width: 334px;
+  }
+
+  .options__link {
+    margin: 0;
+  }
+}
+
+@media (min-width: $desktop-min-width) {
+  .options__item {
+    width: 525px;
+  }
+}
