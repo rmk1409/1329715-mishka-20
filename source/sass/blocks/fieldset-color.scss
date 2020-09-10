@@ -22,3 +22,48 @@
 .fieldset-color__label:first-of-type {
   margin-top: 0;
 }
+
+@media (min-width: $tablet-min-width) {
+  .fieldset-color {
+    background-color: $grey2;
+  }
+
+  .fieldset-color__div {
+    display: grid;
+    grid-template-columns: 100px 500px;
+    column-gap: 20px;
+  }
+
+  .fieldset-color__header {
+    grid-row: 1/-1;
+    grid-column: 1;
+    margin: 0;
+  }
+
+  .fieldset-color__input-div {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+  }
+
+  .fieldset-color__label:nth-of-type(-n+2) {
+    margin-top: 0;
+  }
+
+  .fieldset-color__label {
+    font-size: 19px;
+  }
+}
+
+@media (min-width: $desktop-min-width) {
+  .fieldset-color__div {
+    grid-template-columns: 100px 700px;
+  }
+
+  .fieldset-color__input-div {
+    grid-template-columns: repeat(3, auto);
+  }
+
+  .fieldset-color__label:nth-of-type(-n+3) {
+    margin-top: 0;
+  }
+}

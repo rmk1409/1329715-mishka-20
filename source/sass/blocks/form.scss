@@ -13,3 +13,26 @@
 .form__necessary-fields-info {
   margin: 0;
 }
+
+@media (min-width: $tablet-min-width) {
+  .form__necessary-fields-info-and-submit-button-div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 50px;
+  }
+
+  .form__necessary-fields-info {
+    order: 2;
+  }
+
+  .form__submit-button {
+    margin: 0;
+  }
+}
+
+@media (min-width: $desktop-min-width) {
+  .form__necessary-fields-info-and-submit-button-div {
+    margin-left: 175px;
+  }
+}

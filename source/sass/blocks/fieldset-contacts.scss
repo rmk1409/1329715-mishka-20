@@ -31,3 +31,24 @@
     text-transform: uppercase;
   }
 }
+
+@media (min-width: $tablet-min-width) {
+  .fieldset-contacts {
+    background-color: $grey2;
+  }
+
+  .fieldset-contacts__container {
+    display: grid;
+    grid-template-columns: 100px 500px;
+    column-gap: 20px;
+  }
+
+  .fieldset-contacts__input {
+    background-color: inherit;
+  }
+
+  .fieldset-contacts__label {
+    align-self: center;
+    margin: 0;
+  }
+}

@@ -22,3 +22,21 @@
 .fieldset-type__label:first-of-type {
   margin: 0;
 }
+
+@media (min-width: $tablet-min-width) {
+  .fieldset-type__div {
+    display: grid;
+    grid-template-columns: 100px 500px;
+    column-gap: 70px;
+  }
+
+  .fieldset-type__header {
+    grid-row: 1/-1;
+    grid-column: 1;
+    margin: 0;
+  }
+
+  .fieldset-type__label {
+    font-size: 19px;
+  }
+}
