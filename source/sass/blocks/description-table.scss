@@ -5,13 +5,22 @@
 .description-table__header,
 .description-table__value {
   width: 162px;
+  padding-top: 7px;
+  padding-bottom: 12px;
   font-weight: normal;
   font-size: 15px;
   line-height: 20px;
   color: $almost-black;
+  border-bottom: 1px solid $grey3;
 }
 
 .description-table__header {
   width: 97px;
   text-align: left;
+}
+
+@media (min-width: $tablet-min-width) {
+  .description-table__header {
+    width: 80px;
+  }
 }

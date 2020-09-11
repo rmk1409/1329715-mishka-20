@@ -1,13 +1,35 @@
 .options__link {
+  position: relative;
   display: block;
   width: 260px;
   margin: 0 auto;
-  padding: 24px 120px 31px 30px;
+  padding: 24px 120px 31px 0;
   font-weight: bold;
   font-size: 19px;
   line-height: 24px;
   text-decoration: none;
   color: $white;
+
+  &::after {
+    position: absolute;
+    content: "";
+    top: 23px;
+    right: 6px;
+    width: 40px;
+    height: 62px;
+    background-image: url("../img/icon-interior.svg");
+    opacity: 0.5;
+  }
+}
+
+.options__link--toys {
+  &::after {
+    top: 21px;
+    right: -3px;
+    width: 60px;
+    height: 60px;
+    background-image: url("../img/icon-toy.svg");
+  }
 }
 
 .options__item--interior {
@@ -25,11 +47,31 @@
 
   .options__link {
     margin: 0;
+    width: auto;
+    padding: 26px 140px 30px 36px;
+    font-size: 20px;
+    line-height: 30px;
+
+    &::after {
+      top: 30px;
+      right: 37px;
+    }
+  }
+
+  .options__link--toys {
+    &::after {
+      top: 32px;
+      right: 34px;
+    }
   }
 }
 
 @media (min-width: $desktop-min-width) {
   .options__item {
     width: 525px;
+  }
+
+  .options__link {
+    padding: 26px 320px 30px 36px;
   }
 }

@@ -1,6 +1,8 @@
 .logo-and-toggle-button {
   position: relative;
-  padding: 22px 0;
+  width: 320px;
+  padding: 22px 0 14px;
+  margin: 0 auto;
 }
 
 .logo-and-toggle-button__logo {
@@ -11,29 +13,36 @@
 
 .logo-and-toggle-button__toggle-button {
   position: absolute;
-  right: 0;
-  top: 30px;
+  right: 31px;
+  top: 32px;
   padding: 0;
-  width: 21px;
-  height: 20px;
   background-color: transparent;
   border: none;
-  background-image: url("../img/icon-menu-close.svg");
-}
-
-.logo-and-toggle-button__toggle-button--opened {
   width: 20px;
   height: 14px;
   background-image: url("../img/icon-menu-open.svg");
 }
 
+.logo-and-toggle-button__toggle-button--opened {
+  top: 28px;
+  right: 30px;
+  width: 21px;
+  height: 20px;
+  background-image: url("../img/icon-menu-close.svg");
+}
+
 @media (min-width: $tablet-min-width) {
+  .logo-and-toggle-button {
+    margin: 0;
+    width: 320px;
+    padding: 0;
+  }
+
   .logo-and-toggle-button__toggle-button {
     display: none;
   }
 
-  .logo-and-toggle-button {
-    width: 350px;
-    padding: 0;
+  .logo-and-toggle-button__logo {
+    margin: 0;
   }
 }

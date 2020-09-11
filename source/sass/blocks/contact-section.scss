@@ -24,6 +24,10 @@
 }
 
 @media (min-width: $tablet-min-width) {
+  .contact-section {
+    padding-bottom: 57px;
+  }
+
   .contact-section__container {
     width: $tablet-min-width;
     padding: 0 50px;
@@ -33,20 +37,40 @@
     height: 457px;
     background-image: url("../img/map-tablet@1x.jpg");
   }
+
+  .contact-section__button {
+    margin: 55px auto 0;
+    width: 230px;
+    font-size: 17px;
+  }
 }
 
 @media (min-width: $desktop-min-width) {
   .contact-section {
+    position: relative;
     display: grid;
-    grid-template-columns: 438px 527px;
+    grid-template-columns: 455px 527px;
     grid-template-rows: repeat(2, auto);
-    column-gap: 23px;
+    column-gap: 7px;
     margin: 0 auto;
     width: $desktop-min-width;
-    padding: 70px 50px 105px 112px;
+    padding: 119px 50px 105px 112px;
+
+    &::before {
+      position: absolute;
+      content: "";
+      top: 25px;
+      left: 50px;
+      transform: none;
+      width: 1050px;
+      height: 23px;
+      background-image: url("../img/zigzag-line-desktop.svg");
+      background-size: 1050px;
+    }
   }
 
   .contact-section__container {
+    margin: 0;
     width: auto;
     padding: 0;
   }
@@ -58,5 +82,9 @@
   .contact-section__map {
     grid-row: 1/-1;
     grid-column: 2;
+  }
+
+  .contact-section__button {
+    margin-top: 50px;
   }
 }

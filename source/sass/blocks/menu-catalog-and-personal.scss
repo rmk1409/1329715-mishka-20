@@ -1,5 +1,24 @@
 @media (min-width: $tablet-min-width) {
   .menu-catalog-and-personal__link {
+    width: 168px;
     padding-left: 0;
+    font-size: 15px;
+  }
+}
+
+@media (min-width: $desktop-min-width) {
+  .menu-catalog-and-personal__link {
+    width: 186px;
+    padding: 33px 0;
+    font-size: 17px;
+  }
+
+  .menu-catalog-and-personal__link--catalog {
+    border-right: 1px solid $grey3;
+  }
+
+  .menu-catalog-and-personal__link--private-order {
+    width: 200px;
+    padding-left: 34px;
   }
 }

@@ -1,5 +1,5 @@
 .about-us {
-  padding: 30px 0;
+  padding: 31px 0;
 }
 
 .about-us__header {
@@ -10,17 +10,41 @@
 }
 
 .about-us__advantages-list {
-  margin-top: 30px;
+  margin-top: 29px;
 }
 
 @media (min-width: $tablet-min-width) {
+  .about-us {
+    padding: 57px 0;
+  }
+
   .about-us__header {
     font-size: 43px;
     line-height: 50px;
   }
+
+  .about-us__advantages-list {
+    margin-top: 44px;
+  }
 }
 
 @media (min-width: $desktop-min-width) {
+  .about-us {
+    position: relative;
+    padding: 71px 0 64px;
+
+    &::before {
+      position: absolute;
+      content: "";
+      top: -19px;
+      transform: none;
+      width: 1050px;
+      height: 23px;
+      background-image: url("../img/zigzag-line-desktop.svg");
+      background-size: 1050px;
+    }
+  }
+
   .about-us__header {
     margin-left: 175px;
     font-size: 53px;
@@ -28,6 +52,7 @@
   }
 
   .about-us__advantages-list {
+    margin-top: 43px;
     margin-left: 175px;
   }
 }
