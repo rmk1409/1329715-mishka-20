@@ -1,51 +1,87 @@
 .production-process {
-  padding: 22px 0 50px;
+  padding: 22px 0 32px;
+  border: 1px solid $grey3;
 }
 
 .production-process__header {
+  position: relative;
   margin: 0;
-  padding-left: 91px;
+  padding-left: 90px;
   font-weight: bold;
   font-size: 17px;
   line-height: 24px;
+
+  &::before {
+    position: absolute;
+    content: "";
+    top: 7px;
+    left: 33px;
+    width: 32px;
+    height: 32px;
+    background-image: url("../img/icon-video.svg");
+    background-repeat: no-repeat;
+  }
 }
 
-.production-process__image {
-  margin-top: 27px;
+.production-process__div-for-video {
+  position: relative;
+  margin-top: 25px;
+
+  &::before {
+    position: absolute;
+    content: "";
+    left: 79px;
+    top: 37px;
+    width: 101px;
+    height: 77px;
+    background-image: url("../img/icon-play.svg");
+  }
 }
 
 .production-process__description {
-  margin: 25px auto 0;
-  width: 200px;
+  margin: 27px auto 0;
+  width: 193px;
 }
 
 .production-process__order-button {
-  margin: 40px auto 0;
+  margin: 42px auto 0;
   width: 192px;
 }
 
 @media (min-width: $tablet-min-width) {
   .production-process {
     display: grid;
+    padding: 0 0 45px;
   }
 
-  .production-process__image {
+  .production-process__div-for-video {
     order: -1;
+    margin: 0;
+    min-height: 455px;
   }
 
   .production-process__header {
     margin-top: 40px;
+    padding-left: 106px;
     font-size: 20px;
+
+    &::before {
+      top: -7px;
+      left: 41px;
+    }
   }
 
   .production-process__description {
-    width: 610px;
+    margin-top: 25px;
+    width: 593px;
     font-size: 15px;
     line-height: 30px;
   }
 
   .production-process__order-button {
+    margin-top: 40px;
     width: 584px;
+    font-size: 17px;
   }
 }
 
@@ -53,26 +89,35 @@
   .production-process {
     display: grid;
     grid-template-columns: 683px 230px;
-    grid-template-rows: repeat(3, auto);
-    column-gap: 80px;
+    grid-template-rows: repeat(3, 1fr);
+    column-gap: 78px;
+    padding-bottom: 0;
   }
 
-  .production-process__image {
+  .production-process__div-for-video {
     grid-column: 1;
     grid-row: 1/-1;
     margin: 0;
+    min-height: 453px;
   }
 
   .production-process__header {
-    padding: 49px 0 0;
+    padding: 96px 0 0;
     margin: 0;
+
+    &::before {
+      top: 41px;
+      left: 0;
+    }
   }
 
   .production-process__description {
     width: auto;
+    margin-top: 19px;
   }
 
   .production-process__order-button {
-    width: auto;
+    align-self: flex-start;
+    width: 230px;
   }
 }
