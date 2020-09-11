@@ -1,4 +1,5 @@
 .logo-and-toggle-button {
+  position: relative;
   padding: 22px 0;
 }
 
@@ -9,11 +10,21 @@
 }
 
 .logo-and-toggle-button__toggle-button {
+  position: absolute;
+  right: 0;
+  top: 30px;
   padding: 0;
   width: 21px;
   height: 20px;
   background-color: transparent;
   border: none;
+  background-image: url("../img/icon-menu-close.svg");
+}
+
+.logo-and-toggle-button__toggle-button--opened {
+  width: 20px;
+  height: 14px;
+  background-image: url("../img/icon-menu-open.svg");
 }
 
 @media (min-width: $tablet-min-width) {

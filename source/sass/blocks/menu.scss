@@ -8,8 +8,16 @@
   color: $black;
 }
 
+.menu--hidden {
+  display: none;
+}
+
 @media (min-width: $tablet-min-width) {
   .menu {
+    display: flex;
+  }
+
+  .menu--hidden {
     display: flex;
   }
 
