@@ -1,0 +1,98 @@
+.check {
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding-left: 60px;
+  cursor: pointer;
+}
+
+.check__input {
+  position: absolute;
+  appearance: none;
+}
+
+.check__box,
+.check__radio {
+  position: absolute;
+  content: "";
+  left: 0;
+  top: -10px;
+  width: 38px;
+  height: 39px;
+  border: 2px solid $almost-black;
+}
+
+.check__radio {
+  top: -5px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.check__input:checked + .check__box,
+.check__input:checked + .check__radio {
+  &::before {
+    position: absolute;
+    content: "";
+    left: 10px;
+    top: 10px;
+    width: 16px;
+    height: 16px;
+  }
+}
+
+.check__input:checked + .check__box {
+  &::before {
+    top: 9px;
+    left: 5px;
+    width: 25px;
+    height: 17px;
+    background-image: url("../img/icon-tick.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+}
+
+.check__input:checked + .check__radio {
+  &::before {
+    background-color: $green;
+    border-radius: 50%;
+  }
+}
+
+@media (min-width: $tablet-min-width) {
+  .check {
+    padding-left: 77px;
+  }
+
+  .check__radio {
+    top: -16px;
+    width: 50px;
+    height: 50px;
+  }
+
+  .check__box {
+    top: 7px;
+    left: -3px;
+    width: 52px;
+    height: 52px;
+  }
+
+  .check__input:checked + .check__radio {
+    &::before {
+      left: 13px;
+      top: 13px;
+      width: 20px;
+      height: 20px;
+    }
+  }
+
+  .check__input:checked + .check__box {
+    &::before {
+      top: 14px;
+      left: 8px;
+      width: 32px;
+      height: 23px;
+    }
+  }
+}
