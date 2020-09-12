@@ -120,27 +120,18 @@
 
 .form__contact-input-div {
   position: relative;
+}
 
-  &::after {
-    position: absolute;
-    content: "";
-    top: 12px;
-    right: 7px;
-    width: 25px;
-    height: 24px;
-    background-image: url("../img/icon-phone.svg");
-    background-repeat: no-repeat;
-  }
+.form__input--text-or-number--phone-svg {
+  position: absolute;
+  top: 12px;
+  right: 7px;
+}
 
-  &--email {
-    &::after {
-      top: 11px;
-      right: 3px;
-      width: 32px;
-      height: 32px;
-      background-image: url("../img/icon-mail.svg");
-    }
-  }
+.form__input--text-or-number--mail-svg {
+  position: absolute;
+  top: 11px;
+  right: 3px;
 }
 
 .form__necessary-fields-info {
@@ -223,17 +214,13 @@
     column-gap: 30px;
   }
 
-  .form__contact-input-div {
-    &::after {
-      top: 13px;
-      right: 26px;
-    }
+  .form__input--text-or-number--phone-svg {
+    top: 13px;
+    right: 26px;
+  }
 
-    &--email {
-      &::after {
-        right: 22px;
-      }
-    }
+  .form__input--text-or-number--mail-svg {
+    right: 22px;
   }
 
   .form__contact-input-div:nth-of-type(2) {
@@ -321,10 +308,11 @@
 
   .form__contact-input-div {
     width: 698px;
+  }
 
-    &::after {
-      right: 6px;
-    }
+  .form__input--text-or-number--phone-svg,
+  .form__input--text-or-number--mail-svg {
+    right: 6px;
   }
 
   .form__textarea {
