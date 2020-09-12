@@ -35,6 +35,7 @@
     width: 101px;
     height: 77px;
     background-image: url("../img/icon-play.svg");
+    cursor: pointer;
   }
 }
 
@@ -58,6 +59,17 @@
     order: -1;
     margin: 0;
     min-height: 455px;
+
+    &::before {
+      left: 283px;
+      top: 188px;
+    }
+  }
+
+  .production-process__image {
+    display: block;
+    width: 668px;
+    height: auto;
   }
 
   .production-process__header {
@@ -94,11 +106,20 @@
     padding-bottom: 0;
   }
 
+  .production-process__image {
+    width: 682px;
+    height: auto;
+  }
+
   .production-process__div-for-video {
     grid-column: 1;
     grid-row: 1/-1;
     margin: 0;
     min-height: 453px;
+
+    &::before {
+      left: 291px;
+    }
   }
 
   .production-process__header {

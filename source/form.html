@@ -12,7 +12,11 @@
     <div class="main-nav__container">
       <section class="main-nav__logo-and-toggle-button logo-and-toggle-button">
         <a class="logo-and-toggle-button__logo" href="index.html" aria-label="Логотип">
-          <img src="img/logo-mobile.svg" alt="Логотип" width="86" height="35">
+          <picture>
+            <source media="(min-width: 1150px)" srcset="img/logo-desktop.svg">
+            <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
+            <img class="main-nav__logo-img" src="img/logo-mobile.svg" alt="Логотип" width="86" height="35">
+          </picture>
         </a>
         <button class="logo-and-toggle-button__toggle-button button" type="button" aria-label="Закрыть/Открыть меню">
         </button>
@@ -191,7 +195,7 @@
   <div class="main-footer__container container">
     <a class="main-footer__logo-link" href="index.html" aria-label="Логотип">
       <img
-        class="main-footer__logo-img" src="img/logo-footer.svg" aria-label="Логотип" width="102" height="28"
+        class="main-footer__logo-img" src="img/logo-footer.svg" aria-label="Логотип" width="102" height="34"
         alt="Логотип">
     </a>
     <section class="main-footer__social-section">

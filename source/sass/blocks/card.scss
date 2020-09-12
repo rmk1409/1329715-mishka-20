@@ -4,6 +4,7 @@
 }
 
 .card__image {
+  display: block;
   background-color: $grey;
 }
 
@@ -69,8 +70,13 @@
     grid-template-columns: 333px 335px;
   }
 
-  .card__image {
+  .card__picture {
     grid-row: 1/-1;
+  }
+
+  .card__image {
+    width: 334px;
+    height: auto;
   }
 }
 
@@ -108,7 +114,8 @@
 
 @media (min-width: $desktop-min-width) {
   .card__image {
-    min-height: 462px;
+    width: 316px;
+    height: auto;
   }
 
   .card__info-div {

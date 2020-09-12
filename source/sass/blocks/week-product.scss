@@ -14,8 +14,12 @@
   }
 }
 
-.week-product__image {
+.week-product__picture {
   margin-top: 28px;
+  display: block;
+}
+
+.week-product__image {
   background-color: $grey;
 }
 
@@ -69,7 +73,7 @@
 
 @media (min-width: $tablet-min-width) {
   .week-product {
-    padding-bottom: 67px;
+    padding-bottom: 60px;
     overflow: hidden;
 
     &::after {
@@ -101,7 +105,7 @@
   .week-product__product-info-div {
     margin-top: 38px;
     display: grid;
-    grid-template-rows: repeat(4, auto);
+    grid-template-rows: repeat(4, min-content);
     grid-template-columns: 292px 334px;
     column-gap: 42px;
   }
@@ -118,24 +122,30 @@
   }
 
   .week-product__description-table {
-    margin-top: 40px;
+    margin-top: 31px;
   }
 
   .week-product__price {
-    margin-top: 58px;
+    margin-top: 46px;
     font-size: 20px;
   }
 
   .week-product__order-button {
-    margin-top: 33px;
+    align-self: center;
+    margin-top: 20px;
     width: 292px;
     font-size: 17px;
   }
 
-  .week-product__image {
+  .week-product__picture {
     grid-column: 2;
     grid-row: 1/-1;
-    margin-top: 0;
+    margin-top: 13px;
+  }
+
+  .week-product__image {
+    width: 334px;
+    height: 404px;
   }
 }
 
@@ -186,6 +196,14 @@
 
   .week-product__image {
     position: absolute;
-    z-index: 0;
+    top: -167px;
+    right: 0;
+    width: 525px;
+    height: 636px;
+    z-index: -1;
+  }
+
+  .week-product__picture {
+    position: relative;
   }
 }
