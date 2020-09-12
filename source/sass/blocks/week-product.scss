@@ -69,6 +69,15 @@
 
 .week-product__order-button {
   margin: 24px 0 0;
+
+  &:hover {
+    background-color: $almost-black;
+    color: $white;
+  }
+
+  &:active {
+    color: rgba($white, 0.3);
+  }
 }
 
 @media (min-width: $tablet-min-width) {

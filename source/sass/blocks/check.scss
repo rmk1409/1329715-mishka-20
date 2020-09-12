@@ -6,6 +6,16 @@
   cursor: pointer;
 }
 
+.check:hover .check__box,
+.check:hover .check__radio {
+  border-color: $green;
+}
+
+.check:active .check__box,
+.check:active .check__radio {
+  border-color: rgba($black, 0.3);
+}
+
 .check__input {
   position: absolute;
   appearance: none;

@@ -40,6 +40,16 @@
     height: 1px;
     background-color: $green;
   }
+
+  &:hover {
+    color: $green;
+  }
+
+  &:active {
+    &::after {
+      opacity: 0.1;
+    }
+  }
 }
 
 @media (min-width: $tablet-min-width) and (max-width: $desktop-min-width - 1px) {

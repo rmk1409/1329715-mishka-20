@@ -56,6 +56,10 @@
   text-transform: uppercase;
 }
 
+.modal__label:hover .modal__box {
+  border-color: rgba($almost-black, 0.3);
+}
+
 .modal__box {
   position: absolute;
   content: "";
@@ -63,7 +67,7 @@
   left: 0;
   width: 82px;
   height: 52px;
-  border: 2px solid $grey5;
+  border: 2px solid rgba($almost-black, 0.1);
 }
 
 .modal__input {

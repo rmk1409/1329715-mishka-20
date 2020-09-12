@@ -5,3 +5,11 @@
   margin: 0 auto;
   width: 142px;
 }
+
+.social-list__link:hover .social-list__svg {
+  fill: $green-dark2;
+}
+
+.social-list__link:active .social-list__svg {
+  opacity: 0.3;
+}

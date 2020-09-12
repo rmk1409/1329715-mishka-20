@@ -35,7 +35,23 @@
     width: 101px;
     height: 77px;
     background-image: url("../img/icon-play.svg");
+    background-size: cover;
     cursor: pointer;
+  }
+
+  &:hover {
+    &::before {
+      width: 121px;
+      height: 92px;
+    }
+  }
+
+  &:active {
+    &::before {
+      width: 81px;
+      height: 62px;
+      opacity: 0.3;
+    }
   }
 }
 
@@ -47,6 +63,15 @@
 .production-process__order-button {
   margin: 42px auto 0;
   width: 192px;
+
+  &:hover {
+    background-color: $almost-black;
+    color: $white;
+  }
+
+  &:active {
+    color: rgba($white, 0.3);
+  }
 }
 
 @media (min-width: $tablet-min-width) {
