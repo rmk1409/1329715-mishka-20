@@ -183,6 +183,19 @@
   line-height: 16px;
   background-color: $white;
   color: $almost-black;
+
+  &:hover {
+    background-color: $almost-black;
+    color: $white;
+  }
+
+  &:active {
+    color: rgba($white, 0.3);
+  }
+
+  &:focus {
+    box-shadow: 0 0 6px 2px $green;
+  }
 }
 
 @media (min-width: $tablet-min-width) {

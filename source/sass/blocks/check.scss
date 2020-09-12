@@ -16,6 +16,11 @@
   border-color: rgba($black, 0.3);
 }
 
+.check__input:focus + .check__box,
+.check__input:focus + .check__radio {
+  box-shadow: 0 0 6px 2px $green;
+}
+
 .check__input {
   position: absolute;
   appearance: none;
