@@ -51,9 +51,9 @@
   }
 }
 
-.options__item--interior:hover .options__link,
-.options__item--toys:hover .options__link {
-  padding-bottom: 35px;
+.options__item--interior:hover,
+.options__item--toys:hover {
+  transform: translateY(-5px);
   transition-duration: 0.3s;
 }
 
@@ -101,6 +101,6 @@
   }
 
   .options__link {
-    padding: 26px 320px 30px 36px;
+    padding: 26px 320px 35px 36px;
   }
 }

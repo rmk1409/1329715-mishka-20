@@ -67,6 +67,15 @@
 
 .feedback-section__button {
   margin-top: 38px;
+
+  &:hover {
+    background-color: $almost-black;
+    color: $white;
+  }
+
+  &:active {
+    color: rgba($white, 0.3);
+  }
 }
 
 @media (min-width: $tablet-min-width) {

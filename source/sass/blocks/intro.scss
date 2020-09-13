@@ -66,6 +66,7 @@
     padding-bottom: 5px;
 
     &::after {
+      bottom: -10px;
       height: 34px;
       background-image: url("../img/zigzag-fill-desktop.svg");
     }

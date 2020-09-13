@@ -74,6 +74,15 @@ const minifyImages = () => {
 }
 exports.minifyImages = minifyImages;
 
+const minifyCss = () => {
+  return gulp.src("build/css/style.css")
+    .pipe(csso())
+    .pipe(rename("style.min.css"))
+    .pipe(gulp.dest("build/css"))
+    .pipe(sync.stream());
+}
+exports.minifyCss = minifyCss;
+
 // Styles
 
 const styles = () => {
@@ -84,8 +93,6 @@ const styles = () => {
     .pipe(postcss([
       autoprefixer()
     ]))
-    .pipe(csso())
-    .pipe(rename("style.min.css"))
     .pipe(sourcemap.write("."))
     .pipe(gulp.dest("build/css"))
     .pipe(sync.stream());
@@ -112,14 +119,14 @@ exports.server = server;
 // Watcher
 
 const watcher = () => {
-  gulp.watch("source/sass/**/*.scss", gulp.series("styles"));
+  gulp.watch("source/sass/**/*.scss", gulp.series("styles", "minifyCss"));
   gulp.watch("source/*.html").on("change", sync.reload);
   gulp.watch("source/*.html").on("change", gulp.series("copyHtml"));
   gulp.watch("source/js/*.js").on("change", gulp.series("copyJS"));
   gulp.watch("source/js/*.js").on("change", sync.reload);
 }
 
-const build = gulp.series(clean, copyFiles, copyHtml, copyJS, styles, minifyImages, makeWebp, makeSprite);
+const build = gulp.series(clean, copyFiles, copyHtml, copyJS, styles, minifyCss, minifyImages, makeWebp, makeSprite);
 exports.build = build;
 
 exports.default = gulp.series(

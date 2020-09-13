@@ -28,6 +28,15 @@
 
 .contact-section__button {
   margin: 42px auto 0;
+
+  &:hover {
+    background-color: $almost-black;
+    color: $white;
+  }
+
+  &:active {
+    color: rgba($white, 0.3);
+  }
 }
 
 @media (min-width: $tablet-min-width) {
