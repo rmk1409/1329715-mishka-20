@@ -1,11 +1,45 @@
+.menu-search-and-bucket__search-link,
+.menu-search-and-bucket__bucket-link {
+  position: relative;
+}
+
+.menu-search-and-bucket__icon-search,
+.menu-search-and-bucket__icon-cart {
+  position: absolute;
+  top: 32px;
+  left: 2px;
+  opacity: 0.2;
+}
+
+.menu-search-and-bucket__icon-cart {
+  top: 31px;
+  left: 0;
+}
+
+
 @media (min-width: $tablet-min-width) {
   .menu-search-and-bucket__search-span {
     display: none;
   }
 
   .menu-search-and-bucket__search-link {
-    width: 89px;
+    width: 84px;
     height: 89px;
-    background-color: $green;
+    border-right: 1px solid $grey3;
+    border-left: 1px solid $grey3;
+  }
+
+  .menu-search-and-bucket__icon-search {
+    top: 36px;
+    left: 34px;
+  }
+
+  .menu-search-and-bucket__bucket-link {
+    padding: 33px 0 25px 83px;
+  }
+
+  .menu-search-and-bucket__icon-cart {
+    top: 35px;
+    left: 32px;
   }
 }

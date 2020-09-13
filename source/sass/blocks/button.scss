@@ -3,7 +3,7 @@
   align-items: center;
   justify-content: center;
   width: 260px;
-  padding: 15px;
+  padding: 14px;
   font-weight: bold;
   font-size: 18px;
   line-height: 20px;
@@ -14,10 +14,6 @@
   cursor: pointer;
 }
 
-//@media (min-width: $tablet-min-width) {
-//
-//}
-//
-//@media (min-width: $desktop-min-width) {
-//
-//}
+.button--hidden {
+  display: none;
+}

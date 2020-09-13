@@ -1,0 +1,30 @@
+.control-buttons-div__button {
+  width: 50%;
+  min-height: 52px;
+  padding-top: 34px;
+  background-image: url("../img/icon-left-arrow.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: $white;
+  border: 1px solid $grey3;
+  cursor: pointer;
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    outline: none;
+    opacity: 0.3;
+  }
+}
+
+.control-buttons-div__button--next {
+  background-image: url("../img/icon-right-arrow.svg");
+}
+
+@media (min-width: $tablet-min-width) {
+  .control-buttons-div__button {
+    border: none;
+  }
+}

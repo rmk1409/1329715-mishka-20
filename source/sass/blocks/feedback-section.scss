@@ -1,5 +1,17 @@
 .feedback-section {
-  padding: 30px 0 45px;
+  position: relative;
+  padding: 26px 0 51px;
+
+  &::after {
+    position: absolute;
+    content: "";
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 6px;
+    background-image: url("../img/bg-zigzag-line.svg");
+    background-size: 320px;
+  }
 }
 
 .feedback-section__container {
@@ -30,7 +42,7 @@
 }
 
 .feedback-section__author-info-div {
-  margin-top: 30px;
+  margin-top: 33px;
 }
 
 .feedback-section__author {
@@ -43,13 +55,14 @@
 }
 
 .feedback-section__author-insta {
-  margin: 10px 0 0;
+  margin: 6px 0 0;
   font-size: 17px;
   line-height: 24px;
 }
 
 .feedback-section__control-buttons-div {
-  margin-top: 30px;
+  margin-top: 32px;
+  display: flex;
 }
 
 .feedback-section__button {
@@ -60,24 +73,36 @@
   .feedback-section {
     padding: 0;
     background-image: url("../img/review@1x.jpg");
+    background-size: 350px auto;
     background-repeat: no-repeat;
+    overflow: hidden;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/review@2x.jpg");
+    }
+
+    &::after {
+      height: 9px;
+      transform: scale(2.4);
+    }
   }
 
   .feedback-section__container {
     display: grid;
     grid-template-columns: 285px 175px;
-    column-gap: 226px;
+    column-gap: 208px;
     width: $tablet-min-width;
-    padding: 82px 50px 47px;
+    padding: 79px 50px 135px;
   }
 
   .feedback-section__header {
+    margin-top: 5px;
     font-size: 43px;
     line-height: 50px;
   }
 
   .feedback-section__quote {
-    margin-top: 40px;
+    margin-top: 38px;
     grid-row: 2;
     grid-column: 1/-1;
     font-size: 17px;
@@ -92,31 +117,55 @@
     font-size: 18px;
   }
 
-  .feedback-section__author-insta {
-    font-size: 18px;
-  }
-
   .feedback-section__control-buttons-div {
     margin-top: 60px;
     grid-row: 3;
   }
 
   .feedback-section__button {
+    align-self: baseline;
     margin: 0;
     width: auto;
+    font-size: 17px;
   }
 }
 
 
 @media (min-width: $desktop-min-width) {
   .feedback-section {
-    width: 1150px;
+    width: 1050px;
     margin: 0 auto;
+
+    &::after {
+      display: none;
+    }
   }
 
   .feedback-section__container {
-    column-gap: 450px;
-    padding: 78px 0 96px 175px;
+    column-gap: 415px;
+    padding: 78px 0 100px 175px;
     width: auto;
+  }
+
+  .feedback-section__header {
+    margin: 0;
+    font-size: 53px;
+    line-height: 57px;
+  }
+
+  .feedback-section__quote {
+    margin-top: 36px;
+  }
+
+  .feedback-section__author-info-div {
+    margin-top: 44px;
+  }
+
+  .feedback-section__author {
+    font-size: 17px;
+  }
+
+  .feedback-section__control-buttons-div {
+    margin-top: 46px;
   }
 }

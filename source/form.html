@@ -4,28 +4,41 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Мишка - Форма</title>
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="preload" href="fonts/opensans.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="fonts/opensansbold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="fonts/opensans.woff" as="font" type="font/woff" crossorigin="anonymous">
+  <link rel="preload" href="fonts/opensansbold.woff" as="font" type="font/woff" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/style.min.css">
 </head>
 <body>
 <header>
   <nav class="main-nav">
-    <div class="main-nav__container container">
+    <div class="main-nav__container">
       <section class="main-nav__logo-and-toggle-button logo-and-toggle-button">
         <a class="logo-and-toggle-button__logo" href="index.html" aria-label="Логотип">
-          <img src="https://via.placeholder.com/86x35" alt="Логотип" width="86" height="35">
+          <picture>
+            <source media="(min-width: 1150px)" srcset="img/logo-desktop.svg">
+            <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
+            <img class="main-nav__logo-img" src="img/logo-mobile.svg" alt="Логотип" width="86" height="35">
+          </picture>
         </a>
-        <button class="logo-and-toggle-button__toggle-button button" type="button" aria-label="Закрыть/Открыть меню">
-          X
+        <button
+          class="logo-and-toggle-button__toggle-button button button--hidden" type="button"
+          aria-label="Закрыть/Открыть меню">
         </button>
       </section>
       <ul class="main-nav__menu-catalog-and-personal menu-catalog-and-personal menu reset-list">
         <li class="menu__item">
-          <a class="menu__link menu-catalog-and-personal__link" href="catalog.html">
+          <a
+            class="menu__link menu-catalog-and-personal__link menu-catalog-and-personal__link--catalog"
+            href="catalog.html">
             Каталог товаров
           </a>
         </li>
         <li class="menu__item">
-          <a class="menu__link" href="#">
+          <a
+            class="menu__link menu-catalog-and-personal__link menu-catalog-and-personal__link--private-order"
+            href="#">
             Вязание на заказ
           </a>
         </li>
@@ -33,23 +46,29 @@
       <ul class="main-nav__menu-search-and-bucket menu-search-and-bucket menu reset-list">
         <li class="menu__item">
           <a class="menu__link menu-search-and-bucket__search-link" href="#">
+            <svg class="menu-search-and-bucket__icon-search" fill="#000000" width="18" height="19">
+              <use xlink:href="img/svg-sprite.svg#icon-search"></use>
+            </svg>
             <span class="menu-search-and-bucket__search-span">Поиск по сайту</span>
           </a>
         </li>
         <li class="menu__item">
-          <a class="menu__link" href="#">
-            Корзина: пока пуста
+          <a class="menu__link menu-search-and-bucket__bucket-link" href="#">
+            <svg class="menu-search-and-bucket__icon-cart" fill="#000000" width="21" height="19">
+              <use xlink:href="img/svg-sprite.svg#icon-cart"></use>
+            </svg>
+            Корзина:&nbsp;пока&nbsp;пуста
           </a>
         </li>
       </ul>
       <ul class="main-nav__menu-new-and-sell menu-new-and-sell menu reset-list">
         <li class="menu__item">
-          <a class="menu__link menu-new-and-sell__new-link" href="#">
+          <a class="menu__link menu-new-and-sell__link menu-new-and-sell__link--new-link" href="#">
             Новые поступления
           </a>
         </li>
         <li class="menu__item">
-          <a class="menu__link" href="#">
+          <a class="menu__link menu-new-and-sell__link" href="#">
             Распродажа
           </a>
         </li>
@@ -69,106 +88,124 @@
     </p>
   </div>
   <form class="main-form__form form" action="https://echo.htmlacademy.ru" method="post">
-    <div class="main-form__container">
-      <fieldset class="form__type-fieldset fieldset-type reset-fieldset">
-        <div class="fieldset-type__div">
-          <h2 class="fieldset-type__header">Тип</h2>
-          <div class="fieldset-type__input-div">
-            <label class="fieldset-type__label">
-              <input class="fieldset-type__input" type="radio" name="type" value="accessory" checked>
-              Аксессуар для интерьера
-            </label>
-            <label class="fieldset-type__label">
-              <input class="fieldset-type__input" type="radio" name="type" value="toy">
-              Детская игрушка
-            </label>
-          </div>
-        </div>
-      </fieldset>
-    </div>
-    <fieldset class="form__fieldset-color fieldset-color reset-fieldset">
+    <fieldset class="form__fieldset reset-fieldset">
       <div class="main-form__container">
-        <div class="fieldset-color__div">
-          <h2 class="fieldset-color__header">
-            Цвет
-          </h2>
-          <div class="fieldset-color__input-div">
-            <label class="fieldset-color__label">
-              <input class="fieldset-color__input" type="checkbox" name="white" checked>
-              Белый
-            </label>
-            <label class="fieldset-color__label">
-              <input class="fieldset-color__input" type="checkbox" name="grey" checked>
-              Серый
-            </label>
-            <label class="fieldset-color__label">
-              <input class="fieldset-color__input" type="checkbox" name="tiffani">
-              "Тиффани"
-            </label>
-            <label class="fieldset-color__label">
-              <input class="fieldset-color__input" type="checkbox" name="black">
-              Черный
-            </label>
-            <label class="fieldset-color__label">
-              <input class="fieldset-color__input" type="checkbox" name="pink">
-              Розовый
-            </label>
-            <label class="fieldset-color__label">
-              <input class="fieldset-color__input" type="checkbox" name="orange">
-              Оранжевый
-            </label>
+        <h2 class="form__legend">Тип</h2>
+        <div>
+          <label class="form__label form__label--type check">
+            <input class="check__input" type="radio" name="type" value="accessory" checked>
+            <span class="check__radio"></span>
+            Аксессуар для интерьера
+          </label>
+          <label class="form__label form__label--type check">
+            <input class="check__input" type="radio" name="type" value="toy">
+            <span class="check__radio"></span>
+            Детская игрушка
+          </label>
+        </div>
+      </div>
+    </fieldset>
+    <fieldset class="form__fieldset form__fieldset--color reset-fieldset">
+      <div class="main-form__container">
+        <h2 class="form__legend form__legend--color">
+          Цвет
+        </h2>
+        <div class="form__color-input-div">
+          <label class="form__label form__label--color check">
+            <input class="check__input" type="checkbox" name="white" checked>
+            <span class="check__box"></span>
+            Белый
+          </label>
+          <label class="form__label form__label--color check">
+            <input class="check__input" type="checkbox" name="grey" checked>
+            <span class="check__box"></span>
+            Серый
+          </label>
+          <label class="form__label form__label--color check">
+            <input class="check__input" type="checkbox" name="tiffani">
+            <span class="check__box"></span>
+            &laquo;Тиффани&raquo;
+          </label>
+          <label class="form__label form__label--color check">
+            <input class="check__input" type="checkbox" name="black">
+            <span class="check__box"></span>
+            Черный
+          </label>
+          <label class="form__label form__label--color check">
+            <input class="check__input" type="checkbox" name="pink">
+            <span class="check__box"></span>
+            Розовый
+          </label>
+          <label class="form__label form__label--color check">
+            <input class="check__input" type="checkbox" name="orange">
+            <span class="check__box"></span>
+            Оранжевый
+          </label>
+        </div>
+      </div>
+    </fieldset>
+    <fieldset class="form__fieldset form__fieldset--name reset-fieldset">
+      <div class="main-form__container">
+        <h2 class="form__legend form__legend--name">
+          ФИО
+        </h2>
+        <div>
+          <div class="form__label-and-input-div">
+            <label class="form__label" for="name-input">Имя:</label>
+            <input
+              class="form__input--text-or-number" id="name-input" type="text" placeholder="Введите ваше имя*"
+              required>
+          </div>
+          <div class="form__label-and-input-div">
+            <label class="form__label" for="family-name-input">Фамилия:</label>
+            <input
+              class="form__input--text-or-number" id="family-name-input" type="text" placeholder="Укажите фамилию*"
+              required>
+          </div>
+          <div class="form__label-and-input-div fieldset-name__label-and-input-div">
+            <label class="form__label" for="last-name-input">Отчество:</label>
+            <input
+              class="form__input--text-or-number" id="last-name-input" type="text"
+              placeholder="Отчество, если желаете">
           </div>
         </div>
       </div>
     </fieldset>
-    <div class="main-form__container">
-      <fieldset class="form__name-fieldset fieldset-name reset-fieldset">
-        <div class="fieldset-name__div">
-          <h2 class="fieldset-name__header">
-            ФИО
-          </h2>
-          <div class="fieldset-name__input-div">
-            <div class="fieldset-name__label-and-input-div">
-              <label class="fieldset-name__label" for="name-input">Имя:</label>
-              <input class="fieldset-name__input" id="name-input" type="text" placeholder="Введите ваше имя*" required>
-            </div>
-            <div class="fieldset-name__label-and-input-div">
-              <label class="fieldset-name__label" for="family-name-input">Фамилия:</label>
-              <input
-                class="fieldset-name__input" id="family-name-input" type="text" placeholder="Укажите фамилию*"
-                required>
-            </div>
-            <div class="fieldset-name__label-and-input-div">
-              <label class="fieldset-name__label" for="last-name-input">Отчество:</label>
-              <input class="fieldset-name__input" id="last-name-input" type="text" placeholder="Отчество, если желаете">
-            </div>
-          </div>
-        </div>
-      </fieldset>
-    </div>
-    <fieldset class="form__contacts-fieldset fieldset-contacts reset-fieldset">
-      <div class="fieldset-contacts__container main-form__container">
-        <label class="fieldset-contacts__label" for="phone-input">Тел</label>
-        <div class="fieldset-contacts__input-div fieldset-contacts__input-div--phone">
+    <fieldset class="form__fieldset form__fieldset--contacts reset-fieldset">
+      <div class="main-form__container">
+        <label class="form__legend form__legend--contact" for="phone-input">Тел</label>
+        <div class="form__contact-input-div">
           <input
-            class="fieldset-contacts__input fieldset-contacts__input--phone" id="phone-input" type="tel"
+            class="form__input--text-or-number form__input--text-or-number--phone" id="phone-input" type="tel"
             placeholder="+7 xxx xxx xx xx*" required>
+          <svg
+            class="form__input--text-or-number-svg form__input--text-or-number-svg--phone" fill="#000000" width="25"
+            height="24">
+            <use xlink:href="img/svg-sprite.svg#icon-phone"></use>
+          </svg>
         </div>
-        <label class="fieldset-contacts__label" for="email-input">E-mail</label>
-        <div class="fieldset-contacts__input-div fieldset-contacts__input-div--email">
-          <input class="fieldset-contacts__input" id="email-input" type="text" placeholder="Ваш Email*" required>
+        <label class="form__legend form__legend--contact" for="email-input">E-mail</label>
+        <div class="form__contact-input-div form__contact-input-div--email">
+          <input
+            class="form__input--text-or-number form__input--text-or-number--email"
+            id="email-input" type="text" placeholder="Ваш Email*" required>
+          <svg
+            class="form__input--text-or-number-svg form__input--text-or-number-svg--mail" fill="#000000" width="32"
+            height="32">
+            <use xlink:href="img/svg-sprite.svg#icon-mail"></use>
+          </svg>
         </div>
       </div>
     </fieldset>
-    <div class="main-form__container">
-      <fieldset class="form__extra-info-fieldset fieldset-extra-info reset-fieldset">
-        <div class="fieldset-extra-info__div">
-          <h2 class="fieldset-extra-info__header">Доп</h2>
-          <textarea
-            class="fieldset-extra-info__comment-textarea" name="comment"
-            placeholder="Опишите все ваши пожелания к заказу"></textarea>
-        </div>
-      </fieldset>
+    <fieldset class="form__fieldset form__fieldset--extra-info reset-fieldset">
+      <div class="main-form__container">
+        <h2 class="form__legend form__legend--extra-info">Доп</h2>
+        <textarea
+          class="form__textarea" name="comment"
+          placeholder="Опишите все ваши пожелания к заказу"></textarea>
+      </div>
+    </fieldset>
+    <div class="container">
       <div class="form__necessary-fields-info-and-submit-button-div">
         <p class="form__necessary-fields-info">*Поля обязательны для заполнения</p>
         <button class="form__submit-button button" type="submit">Отправить заказ</button>
@@ -179,40 +216,43 @@
 <footer class="main-footer">
   <div class="main-footer__container container">
     <a class="main-footer__logo-link" href="index.html" aria-label="Логотип">
-      <img
-        class="main-footer__logo-img" src="https://via.placeholder.com/102x28" aria-label="Соц. сеть" width="102"
-        height="28" alt="Логотип">
+      <svg class="main-footer__logo-img" fill="#000000" width="102" height="34">
+        <use xlink:href="img/svg-sprite.svg#logo-footer"></use>
+      </svg>
     </a>
     <section class="main-footer__social-section">
       <ul class="main-footer__social-list social-list reset-list">
         <li class="social-list__item">
           <a class="social-list__link" href="#" aria-label="Соц. сеть">
-            <img
-              class="social-list__svg" src="https://via.placeholder.com/22x21" aria-label="Соц. сеть" width="22"
-              height="21" alt="Соц. сеть">
+            <svg class="social-list__svg" fill="#000000" width="22" height="21">
+              <use xlink:href="img/svg-sprite.svg#icon-insta"></use>
+            </svg>
           </a>
         </li>
         <li class="social-list__item">
           <a class="social-list__link" href="#" aria-label="Соц. сеть">
-            <img
-              class="social-list__svg" src="https://via.placeholder.com/15x28" aria-label="Соц. сеть" width="15"
-              height="28" alt="Соц. сеть">
+            <svg class="social-list__svg" fill="#000000" width="15" height="28">
+              <use xlink:href="img/svg-sprite.svg#icon-fb"></use>
+            </svg>
           </a>
         </li>
         <li class="social-list__item">
           <a class="social-list__link" href="#" aria-label="Соц. сеть">
-            <img
-              class="social-list__svg" src="https://via.placeholder.com/23x20" aria-label="Соц. сеть" width="23"
-              height="20" alt="Соц. сеть">
+            <svg class="social-list__svg" fill="#000000" width="23" height="20">
+              <use xlink:href="img/svg-sprite.svg#icon-twitter"></use>
+            </svg>
           </a>
         </li>
       </ul>
     </section>
     <a class="main-footer__academy-link" href="https://htmlacademy.ru/intensive/adaptive">
       Разработано
-      <img src="https://via.placeholder.com/27x34" aria-label="Академия" width="27" height="34" alt="Академия">
+      <svg class="main-footer__academy-svg" fill="#63d1bb" width="27" height="34">
+        <use xlink:href="img/svg-sprite.svg#logo-htmlacademy"></use>
+      </svg>
     </a>
   </div>
 </footer>
+<script src="js/script-min.js"></script>
 </body>
 </html>

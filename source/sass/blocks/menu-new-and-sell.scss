@@ -1,5 +1,11 @@
 @media (min-width: $tablet-min-width) {
-  .menu-new-and-sell__new-link {
+  .menu-new-and-sell__link {
+    width: 200px;
+    padding-top: 18px;
+    font-size: 15px;
+  }
+
+  .menu-new-and-sell__link--new-link {
     padding-left: 0;
   }
 }

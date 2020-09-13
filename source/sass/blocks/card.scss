@@ -1,31 +1,78 @@
 .card {
-  padding-bottom: 26px;
+  display: flex;
+  flex-direction: column;
+}
+
+.card:hover .card__info-div {
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+}
+
+.card:active .card__info-div {
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
 }
 
 .card__image {
+  display: block;
   background-color: $grey;
 }
 
+.card__info-div {
+  padding: 27px 27px 0;
+  border: 1px solid $grey3;
+}
+
+.card__info-div--big-bucket {
+  padding-top: 24px;
+}
+
 .card__header {
-  margin: 27px 0 0;
+  margin: 0;
   font-weight: bold;
   font-size: 17px;
   line-height: 24px;
-  color: $almost-black;
+  text-decoration: none;
+  color: $black;
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.card__header--big-bucket {
+  margin-top: 5px;
 }
 
 .card__description {
-  margin: 0 0 17px;
+  margin: 1px 0 0;
   font-weight: normal;
   font-size: 13px;
   line-height: 30px;
   color: $almost-black;
 }
 
+.card__description--bucket {
+  margin-top: 5px;
+}
+
+.card__description--big-bucket {
+  margin-top: 9px;
+}
+
 .card__price-and-order-button-div {
   display: flex;
   justify-content: space-between;
   margin: 22px 0 0;
+  padding: 22px 0 24px;
+  border-top: 1px solid $grey3;
+}
+
+.card__price-and-order-button-div--bucket,
+.card__price-and-order-button-div--big-bucket {
+  margin-top: 18px;
 }
 
 .card__price {
@@ -35,14 +82,80 @@
   line-height: 24px;
 }
 
+.card__order-svg {
+  opacity: 0.2;
+  transition-duration: 0.3s;
+}
+
+.card__order-button:hover .card__order-svg {
+  opacity: 1;
+  fill: $green-light;
+}
+
+.card__order-button:active .card__order-svg {
+  opacity: 0.3;
+}
+
 @media (min-width: $tablet-min-width) and (max-width: $desktop-min-width - 1px) {
   .card {
     display: grid;
-    grid-template-columns: 234px 335px;
-    grid-template-rows: repeat(3, auto);
+    grid-template-columns: 333px 335px;
+  }
+
+  .card__picture-link {
+    grid-row: 1/-1;
   }
 
   .card__image {
-    grid-row: 1/-1;
+    width: 334px;
+    height: auto;
+  }
+}
+
+@media (min-width: $tablet-min-width) {
+  .card__header {
+    width: 230px;
+    font-size: 20px;
+  }
+
+  .card__description {
+    margin-top: 6px;
+    font-size: 15px;
+  }
+
+  .card__info-div {
+    display: flex;
+    flex-direction: column;
+    min-height: 334px;
+    padding: 27px 33px 0;
+  }
+
+  .card__description--bucket {
+    margin-top: 8px;
+  }
+
+  .card__price-and-order-button-div {
+    margin-top: auto;
+    padding: 24px 0 22px;
+  }
+
+  .card__price {
+    font-size: 17px;
+  }
+}
+
+@media (min-width: $desktop-min-width) {
+  .card__image {
+    width: 316px;
+    height: auto;
+  }
+
+  .card__info-div {
+    min-height: 197px;
+    padding: 27px 27px 0;
+  }
+
+  .card__order-button {
+    margin-right: 4px;
   }
 }
