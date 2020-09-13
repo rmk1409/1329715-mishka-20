@@ -14,10 +14,6 @@
   cursor: pointer;
 }
 
-//@media (min-width: $tablet-min-width) {
-//
-//}
-//
-//@media (min-width: $desktop-min-width) {
-//
-//}
+.button--hidden {
+  display: none;
+}

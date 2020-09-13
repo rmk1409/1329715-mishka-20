@@ -30,6 +30,8 @@
   font-weight: bold;
   font-size: 17px;
   line-height: 24px;
+  text-decoration: none;
+  color: $black;
 
   &:hover {
     opacity: 0.6;
@@ -100,7 +102,7 @@
     grid-template-columns: 333px 335px;
   }
 
-  .card__picture {
+  .card__picture-link {
     grid-row: 1/-1;
   }
 
