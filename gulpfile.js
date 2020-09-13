@@ -11,6 +11,8 @@ const svgstore = require("gulp-svgstore");
 const rename = require("gulp-rename");
 const webp = require("gulp-webp");
 const csso = require("gulp-csso");
+const minifyJS = require('gulp-minify');
+const htmlmin = require('gulp-htmlmin');
 
 const copyFiles = () => {
   return gulp.src([
@@ -25,12 +27,14 @@ exports.copyFiles = copyFiles;
 
 const copyHtml = () => {
   return gulp.src("source/*.html")
+    .pipe(htmlmin({ collapseWhitespace: true }))
     .pipe(gulp.dest("build/"));
 }
 exports.copyHtml = copyHtml;
 
 const copyJS = () => {
   return gulp.src("source/js/*.js")
+    .pipe(minifyJS())
     .pipe(gulp.dest("build/js"));
 }
 exports.copyJS = copyJS;

@@ -13,6 +13,7 @@
 
 .menu__item:hover .menu-search-and-bucket__icon-search,
 .menu__item:hover .menu-search-and-bucket__icon-cart {
+  opacity: 1;
   fill: $green-light;
   transition-duration: 0.3s;
 }

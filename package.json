@@ -10,6 +10,7 @@
     "gulp": "4.0.2",
     "gulp-csso": "^4.0.1",
     "gulp-imagemin": "^7.1.0",
+    "gulp-minify": "^3.1.0",
     "gulp-plumber": "1.2.1",
     "gulp-postcss": "8.0.0",
     "gulp-rename": "^2.0.0",
@@ -42,5 +43,8 @@
   ],
   "engines": {
     "node": "12.18.2"
+  },
+  "dependencies": {
+    "gulp-htmlmin": "^5.0.1"
   }
 }
