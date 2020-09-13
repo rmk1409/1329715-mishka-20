@@ -21,6 +21,11 @@
   color: $black;
 }
 
+.main-footer__academy-text {
+  margin: 0;
+  width: min-content;
+}
+
 .main-footer__academy-link:hover .main-footer__academy-svg {
   fill: $green-dark2;
 }

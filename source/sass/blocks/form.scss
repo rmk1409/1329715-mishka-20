@@ -2,11 +2,11 @@
   padding-bottom: 55px;
 }
 
-.form__input--text-or-number-svg {
+.form__input-text-or-number-svg {
   opacity: 0.2;
 }
 
-.form__contact-input-div:hover .form__input--text-or-number-svg {
+.form__contact-input-div:hover .form__input-text-or-number-svg {
   opacity: 1;
   fill: $green;
 }
@@ -95,7 +95,7 @@
   margin: 0;
 }
 
-.form__input--text-or-number {
+.form__input-text-or-number {
   width: 100%;
   padding: 17px 0;
   font-family: inherit;
@@ -157,13 +157,13 @@
   position: relative;
 }
 
-.form__input--text-or-number-svg--phone {
+.form__input-text-or-number-svg--phone {
   position: absolute;
   top: 12px;
   right: 7px;
 }
 
-.form__input--text-or-number-svg--mail {
+.form__input-text-or-number-svg--mail {
   position: absolute;
   top: 11px;
   right: 3px;
@@ -262,12 +262,12 @@
     column-gap: 30px;
   }
 
-  .form__input--text-or-number-svg--phone {
+  .form__input-text-or-number-svg--phone {
     top: 13px;
     right: 26px;
   }
 
-  .form__input--text-or-number-svg--mail {
+  .form__input-text-or-number-svg--mail {
     right: 22px;
   }
 
@@ -281,7 +281,7 @@
     align-items: center;
   }
 
-  .form__input--text-or-number {
+  .form__input-text-or-number {
     margin-left: 25px;
     padding: 14px 14px 14px 17px;
     font-size: 19px;
@@ -358,8 +358,8 @@
     width: 698px;
   }
 
-  .form__input--text-or-number-svg--phone,
-  .form__input--text-or-number-svg--mail {
+  .form__input-text-or-number-svg--phone,
+  .form__input-text-or-number-svg--mail {
     right: 6px;
   }
 
