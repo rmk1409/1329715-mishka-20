@@ -1,6 +1,7 @@
 @media (min-width: $tablet-min-width) {
   .main-index {
     margin-top: -65px;
+    border-top: 1px solid $grey3;
 
     &::before {
       height: 15px;

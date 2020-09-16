@@ -23,6 +23,7 @@
 @media (min-width: $tablet-min-width) {
   .catalog-main {
     margin-top: -66px;
+    border-top: 1px solid $grey3;
   }
 
   .catalog-main__div-for-header {
