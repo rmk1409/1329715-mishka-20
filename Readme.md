@@ -5,6 +5,8 @@ To look at this project:
 2. **npm i** - to set the dependencies.
 3. **npm start** - to build and to run the project.
 
+Or just to check the public version click [here](https://rmk1409.github.io/mishka-20/).
+
 * Студент: [R P](https://up.htmlacademy.ru/adaptive/20/user/1329715).
 * Наставник: [Виктория Коваленко](https://htmlacademy.ru/profile/id42638)..
 
